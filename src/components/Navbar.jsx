@@ -5,7 +5,7 @@ import instagram from '../assets/instagram.svg'
 function Navbar() {
   return (
     <header>
-      <nav className="fixed top-0 w-full bg-[var(--primary-color)] z-10">
+      <nav className="z-50 fixed top-0 w-full bg-[var(--primary-color)]">
         <div className="max-w-[1240px] mx-auto h-[70px] flex items-center justify-center">
           <div className="flex justify-between items-center w-full  px-4">
             {/* Logo */}
