@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Support from './sections/Support';
 import Destinations from './sections/Destinations';
 import Countries from './sections/Countries';
+import Locations from './sections/Locations';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Destinations/>
         <hr className='text-[#e2dbdb]'/>
         <Countries/>
+        <Locations/>
       </main>
       <Footer/>
     </div>

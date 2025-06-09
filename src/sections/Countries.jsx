@@ -41,7 +41,7 @@ const Countries = () => {
         {/* Title bar */}
         <div className="mb-[20px] w-[500px]">
           <h2 className="mb-[20px] text-[32px] font-bold text-[#2a2a2a]">
-            Visit One Of Our Countries <br /> Now
+            Visit One Of Our Countries Now
           </h2>
           <p className="text-[16px] text-[#afafaf] leading-[30px] font-poppins">
             Discover the best  offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences.
@@ -65,7 +65,7 @@ const Countries = () => {
                     </p>
                   </div>
                   <div className='absolute right-1'>
-                    <GenericButton label='Explore More' />
+                    <GenericButton label='Explore More' href='/reservation'  />
                   </div>
                 </div>
                 <p className='text-[18px] text-[#afafaf] my-[18px]'>

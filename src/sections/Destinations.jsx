@@ -25,7 +25,7 @@ const Destinations = () => {
         {/* Title bar */}
         <div className="mb-[20px] w-[500px]">
           <h2 className="mb-[20px] text-[32px] font-bold text-[#2a2a2a]">
-            Explore Destinations with <br /> Ease
+            Explore Destinations with Ease
           </h2>
           <p className="text-[16px] text-[#afafaf] leading-[30px] font-poppins">
             Find the best deals on railway and airplane tickets in each city, carefully selected for you.
@@ -49,7 +49,7 @@ const Destinations = () => {
                       </p>
                   </div>
                   <div className='absolute right-1'>
-                    <GenericButton label='Explore More' />
+                    <GenericButton href='/reservation' label='Explore More' />
                   </div>
                 </div>
                 <p className='text-[18px] text-[#afafaf] my-[18px]'>

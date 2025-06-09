@@ -109,7 +109,7 @@ const Showcase = () => {
             </div>
 
             {/* 4: Explore button */}
-            <GenericButton label="Explore More" href="#contact" />
+            <GenericButton label="Explore More" href='/reservation' />
           </div>
         </div>
 
