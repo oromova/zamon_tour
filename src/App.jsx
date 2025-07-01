@@ -22,8 +22,8 @@ const App = () => {
         <hr className='text-[#e2dbdb]' />
         <Destinations/>
         <hr className='text-[#e2dbdb]'/>
-        {/* <Countries/>
-        <Locations/> */}
+        <Countries/>
+        <Locations/>
       </main>
       <Footer/>
     </div>

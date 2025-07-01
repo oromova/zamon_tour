@@ -37,67 +37,81 @@ const countries = [
 const Countries = () => {
   return (
     <section className="pt-[40px]">
-      <div className="w-[1240px] mx-auto">
+      <div className="w-full max-w-[1240px] mx-auto px-4">
         {/* Title bar */}
-        <div className="mb-[20px] w-[500px]">
+        <div className="mb-[20px] w-full md:w-[500px]">
           <h2 className="mb-[20px] text-[32px] font-bold text-[#2a2a2a]">
             Visit One Of Our Countries Now
           </h2>
           <p className="text-[16px] text-[#afafaf] leading-[30px] font-poppins">
-            Discover the best  offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences.
+            Discover the best offers in each city, curated just for you. Immerse yourself in a world of savings and indulge in unparalleled experiences.
           </p>
         </div>
+
         {/* Countries */}
         <div>
           {countries.map((item, index) => (
-            <div key={index} className="flex">
-              <div className="w-[350px] h-[220px] my-[30px] mr-[30px]">
-                <img className="w-[400px] h-[350px]  rounded-2xl"
-                  src={item.img} alt={item.title} />
+            <div
+              key={index}
+              className="flex flex-col md:flex-row mb-[30px]"
+            >
+              {/* Image */}
+              <div className="w-full md:w-[350px] md:h-[220px] mb-4 md:my-[30px] md:mr-[30px]">
+                <img
+                  className="w-full h-[350px] object-cover rounded-2xl"
+                  src={item.img}
+                  alt={item.title}
+                />
               </div>
-              <div className='py-[30px] w-[610px] relative'>
-                <div className='flex'>
+
+              {/* Content */}
+              <div className="w-full md:w-[610px] py-[30px]">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                   <div>
-                    <h2 className='text-[20px] font-bold mb-[5px]'>
+                    <h2 className="text-[20px] font-bold mb-[5px]">
                       {item.title}
                     </h2>
-                    <p className='text-[#afafaf] text-[15px]'>{item.subtitle}
-                    </p>
+                    <p className="text-[#afafaf] text-[15px]">{item.subtitle}</p>
                   </div>
-                  <div className='absolute right-1'>
-                    <GenericButton label='Explore More' href='/reservation'  />
+                  <div className="mt-4 md:mt-0">
+                    <GenericButton label="Explore More" href="/reservation" />
                   </div>
                 </div>
-                <p className='text-[18px] text-[#afafaf] my-[18px]'>
+
+                <p className="text-[18px] text-[#afafaf] my-[18px]">
                   {item.description}
                 </p>
-                <hr className='text-[#e1dddd] m-3' />
-                <div className='flex justify-between'>
-                  <div className='flex items-center gap-2 text-[#afafaf]'>
-                    <FontAwesomeIcon icon={faUser} size="m" />
+
+                <hr className="text-[#e1dddd] m-3" />
+
+                {/* Icons Row */}
+                <div className="flex flex-wrap justify-between gap-y-4">
+                  <div className="flex items-center gap-2 text-[#afafaf]">
+                    <FontAwesomeIcon icon={faUser} />
                     <p>8.66 Mil People</p>
                   </div>
-                  <div className='flex text-[#afafaf] items-center gap-2'>
-                    <FontAwesomeIcon icon={faGlobe} size="m" />
-                    <p>41.290 km2</p>
+                  <div className="flex items-center gap-2 text-[#afafaf]">
+                    <FontAwesomeIcon icon={faGlobe} />
+                    <p>41.290 km²</p>
                   </div>
-                  <div className='flex text-[#afafaf] items-center gap-2'>
-                    <FontAwesomeIcon icon={faHome} size="m" />
+                  <div className="flex items-center gap-2 text-[#afafaf]">
+                    <FontAwesomeIcon icon={faHome} />
                     <p>$1.100.200</p>
                   </div>
-
                 </div>
-                <hr className='text-[#e1dddd] m-3' />
+
+                <hr className="text-[#e1dddd] m-3" />
+
+                {/* Link */}
                 <a
                   href="/reservation"
                   className="font-semibold text-[var(--primary-color)] inline-flex items-center group"
                 >
                   Need Directions?
-                  <span className="ml-2 text-[var(--primary-color)] group-hover:translate-x-1 transition-transform duration-200">
-                    <FontAwesomeIcon icon={faArrowRight} size="m" />
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">
+                    <FontAwesomeIcon icon={faArrowRight} />
                   </span>
                 </a>
-
               </div>
             </div>
           ))}
