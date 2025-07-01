@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { faBuilding, faPlane, faTaxi, faUsers } from '@fortawesome/free-solid-svg-icons';
 import GenericButton from '../components/Generics/GenericButton';
 import Slider from "react-slick";
+import { ArrowButton } from '../components/Generics/Arrows';
 
 const cards = [
   { img: img1, title: 'USA', checkIns: 400 },
@@ -106,6 +107,11 @@ const Offers = () => {
             </div>
           ))}
         </Slider>
+        {/* Arrows */}
+        <div className="flex justify-center gap-4 mb-6">
+          <ArrowButton direction="left" onClick={() => sliderRef.current?.slickPrev()} />
+          <ArrowButton direction="right" onClick={() => sliderRef.current?.slickNext()} />
+        </div>
       </div>
     </section>
   );

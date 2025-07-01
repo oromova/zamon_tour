@@ -17,12 +17,12 @@ const App = () => {
       <main>
         <Showcase/>
         <Offers/>
-        {/* <hr className='text-[#e2dbdb]' />
+        <hr className='text-[#e2dbdb]' />
         <Support/>
         <hr className='text-[#e2dbdb]' />
         <Destinations/>
         <hr className='text-[#e2dbdb]'/>
-        <Countries/>
+        {/* <Countries/>
         <Locations/> */}
       </main>
       <Footer/>

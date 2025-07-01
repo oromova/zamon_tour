@@ -21,9 +21,9 @@ const destinations = [
 const Destinations = () => {
   return (
     <section className="pt-[40px]" id='about'>
-      <div className="w-[1240px] mx-auto">
+      <div className="w-full max-w-[1240px] mx-auto px-4">
         {/* Title bar */}
-        <div className="mb-[20px] w-[500px]">
+        <div className="mb-[20px] w-full md:w-[500px]">
           <h2 className="mb-[20px] text-[32px] font-bold text-[#2a2a2a]">
             Explore Destinations with Ease
           </h2>
@@ -31,28 +31,38 @@ const Destinations = () => {
             Find the best deals on railway and airplane tickets in each city, carefully selected for you.
           </p>
         </div>
+
         {/* Destinations */}
         <div>
           {destinations.map((item, index) => (
-            <div key={index} className="flex">
-              <div className="w-[350px] h-[220px] my-[30px] mr-[30px]">
-                <img className="w-full rounded-2xl"
-                  src={item.img} alt={item.title} />
+            <div
+              key={index}
+              className="flex flex-col md:flex-row md:items-start mb-[30px]"
+            >
+              <div className="w-full md:w-[350px] h-[220px] md:my-[30px] md:mr-[30px] mb-4">
+                <img
+                  className="w-full h-full object-cover rounded-2xl"
+                  src={item.img}
+                  alt={item.title}
+                />
               </div>
-              <div className='py-[30px] w-[610px] relative'>
-                <div className='flex'>
+
+              <div className="w-full md:w-[610px] py-[10px]">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                   <div>
-                    <h2 className='text-[20px] font-bold mb-[5px]'>
+                    <h2 className="text-[20px] font-bold mb-[5px]">
                       {item.title}
                     </h2>
-                      <p className='text-[#afafaf] text-[15px]'>{item.subtitle}
-                      </p>
+                    <p className="text-[#afafaf] text-[15px]">{item.subtitle}</p>
                   </div>
-                  <div className='absolute right-1'>
-                    <GenericButton href='/reservation' label='Explore More' />
+                  <div className="mt-4 md:mt-0">
+                    <GenericButton
+                      href="/reservation"
+                      label="Explore More"
+                    />
                   </div>
                 </div>
-                <p className='text-[18px] text-[#afafaf] my-[18px]'>
+                <p className="text-[18px] text-[#afafaf] my-[18px]">
                   {item.description}
                 </p>
               </div>
