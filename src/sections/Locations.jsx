@@ -47,9 +47,7 @@ const Locations = () => {
                 setLightboxOpen(true);
               }}
             />
-            <div>
-              <h4></h4>
-            </div>
+           
           </SwiperSlide>
         ))}
       </Swiper>

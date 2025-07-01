@@ -17,13 +17,13 @@ const App = () => {
       <main>
         <Showcase/>
         <Offers/>
-        <hr className='text-[#e2dbdb]' />
+        {/* <hr className='text-[#e2dbdb]' />
         <Support/>
         <hr className='text-[#e2dbdb]' />
         <Destinations/>
         <hr className='text-[#e2dbdb]'/>
         <Countries/>
-        <Locations/>
+        <Locations/> */}
       </main>
       <Footer/>
     </div>

@@ -51,82 +51,86 @@ const Showcase = () => {
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Background image */}
-      <div
-        style={{ backgroundImage: `url(${slides[activeIndex].image})` }}
-        className="w-full h-full bg-cover bg-center transition-all duration-1000"
-      />
+  {/* Background image */}
+  <div
+    style={{ backgroundImage: `url(${slides[activeIndex].image})` }}
+    className="w-full h-full bg-cover bg-center transition-all duration-1000"
+  />
 
-      {/* Kontent qismi */}
-      <div className="absolute top-[25%] left-1/2 transform -translate-x-1/2 z-10 text-white text-center w-full px-4">
-        <p className="text-[20px] mb-[20px] font-medium">
-          Take a Glimpse Into The Beautiful City Of:
-        </p>
-        <h1 className="text-[50px] font-bold mb-[30px]">
-          {slides[activeIndex].city}</h1>
-        <GenericButton label="Go There" href="#contact" />
+  {/* Kontent qismi */}
+  <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 z-10 text-white text-center w-full px-4">
+    <p className="text-[16px] sm:text-[18px] mb-[16px] font-medium">
+      Take a Glimpse Into The Beautiful City Of:
+    </p>
+    <h1 className="text-[30px] sm:text-[40px] md:text-[50px] font-bold mb-[20px]">
+      {slides[activeIndex].city}
+    </h1>
+    <GenericButton label="Go There" href="#contact" />
 
-        {/* Info */}
-        <div className="mt-[60px] bg-white py-[30px] px-[60px] rounded-[61px] max-w-[1000px] mx-auto">
-          <div className="flex items-center gap-14">
-            {/* 1: Population */}
-            <div className="flex items-center gap-4">
-              <div className="bg-white px-[18px] py-4 rounded-full text-[var(--primary-color)] border border-[var(--primary-color)]">
-                <FontAwesomeIcon icon={faUser} size="xl" />
-              </div>
-              <div className="text-left text-black">
-                <p className="text-[#afafaf] text-[15px]">Population:</p>
-                <p className="text-[var(--primary-color)] text-[20px] font-bold">
-                  {slides[activeIndex].population}
-                </p>
-              </div>
-            </div>
-
-            {/* 2: Territory */}
-            <div className="flex items-center gap-4">
-              <div className="bg-white px-4 py-4 rounded-full text-[var(--primary-color)] border border-[var(--primary-color)]">
-                <FontAwesomeIcon icon={faGlobe} size="xl" />
-              </div>
-              <div className="text-left text-black">
-                <p className="text-[#afafaf] text-[15px]">Territory:</p>
-                <p className="text-[var(--primary-color)] text-[20px] font-bold">
-                  {slides[activeIndex].territory}
-                </p>
-              </div>
-            </div>
-
-            {/* 3: Price */}
-            <div className="flex items-center gap-4">
-              <div className="bg-white px-4 py-4 rounded-full text-[var(--primary-color)] border border-[var(--primary-color)]">
-                <FontAwesomeIcon icon={faHome} size="xl" />
-              </div>
-              <div className="text-left text-black">
-                <p className="text-[#afafaf] text-[15px]">AVG Price:</p>
-                <p className="text-[var(--primary-color)] text-[20px] font-bold">
-                  {slides[activeIndex].avgPrice}
-                </p>
-              </div>
-            </div>
-
-            {/* 4: Explore button */}
-            <GenericButton label="Explore More" href='/reservation' />
+    {/* Info */}
+    <div className="mt-[40px] bg-white py-6 px-4 sm:px-8 md:px-[60px] rounded-2xl md:rounded-[61px] max-w-[65%] md:max-w-[1000px] mx-auto">
+      <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-6 md:gap-14">
+        {/* Population */}
+        <div className="flex items-center gap-4">
+          <div className="bg-white px-5 py-4 rounded-full text-[var(--primary-color)] border border-[var(--primary-color)]">
+            <FontAwesomeIcon icon={faUser} size="lg" />
+          </div>
+          <div className="text-left text-black">
+            <p className="text-[#afafaf] text-[14px]">Population:</p>
+            <p className="text-[var(--primary-color)] text-[18px] font-bold">
+              {slides[activeIndex].population}
+            </p>
           </div>
         </div>
 
-        {/* Progress barlar */}
-        <div className="mt-10 flex gap-10 w-[50%] mx-auto">
-          {slides.map((_, index) => (
-            <div key={index} className="w-full h-[2px] bg-white rounded overflow-hidden">
-              <div
-                className={`h-full bg-[var(--primary-color)] ${
-                  index === activeIndex ? 'animate-progress' : index < activeIndex ? 'w-full' : 'w-0'
-                }`}
-              ></div>
-            </div>
-          ))}
+        {/* Territory */}
+        <div className="flex items-center gap-4">
+          <div className="bg-white px-5 py-4 rounded-full text-[var(--primary-color)] border border-[var(--primary-color)]">
+            <FontAwesomeIcon icon={faGlobe} size="lg" />
+          </div>
+          <div className="text-left text-black">
+            <p className="text-[#afafaf] text-[14px]">Territory:</p>
+            <p className="text-[var(--primary-color)] text-[18px] font-bold">
+              {slides[activeIndex].territory}
+            </p>
+          </div>
+        </div>
+
+        {/* Price */}
+        <div className="flex items-center gap-4">
+          <div className="bg-white px-5 py-4 rounded-full text-[var(--primary-color)] border border-[var(--primary-color)]">
+            <FontAwesomeIcon icon={faHome} size="lg" />
+          </div>
+          <div className="text-left text-black">
+            <p className="text-[#afafaf] text-[14px]">AVG Price:</p>
+            <p className="text-[var(--primary-color)] text-[18px] font-bold">
+              {slides[activeIndex].avgPrice}
+            </p>
+          </div>
+        </div>
+
+        {/* Explore More Button */}
+        <div>
+          <GenericButton label="Explore More" href="/reservation" />
         </div>
       </div>
-    </section>
+    </div>
+
+    {/* Progress Bars */}
+    <div className="mt-10 flex gap-4 md:gap-10 w-full max-w-[500px] mx-auto">
+      {slides.map((_, index) => (
+        <div key={index} className="w-full h-[2px] bg-white rounded overflow-hidden">
+          <div
+            className={`h-full bg-[var(--primary-color)] ${
+              index === activeIndex ? 'animate-progress' : index < activeIndex ? 'w-full' : 'w-0'
+            }`}
+          ></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 };
 

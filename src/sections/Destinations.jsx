@@ -20,7 +20,7 @@ const destinations = [
 
 const Destinations = () => {
   return (
-    <section className="pt-[40px]">
+    <section className="pt-[40px]" id='about'>
       <div className="w-[1240px] mx-auto">
         {/* Title bar */}
         <div className="mb-[20px] w-[500px]">
